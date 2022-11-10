@@ -1,0 +1,21 @@
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: $white;
+  border-radius: 15px;
+  padding: 20px 30px;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-navigation{
+    max-width: fit-content;
+       display: flex;
+     flex-direction: column;
+     gap: 10px;
+  }
+
+ 
+}
