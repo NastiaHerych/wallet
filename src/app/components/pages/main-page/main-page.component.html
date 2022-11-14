@@ -1,4 +1,37 @@
 <app-header></app-header>
 <div class="main">
-  <app-navigation-menu></app-navigation-menu>
+  <div class="main__left">
+    <app-navigation-menu></app-navigation-menu>
+  </div>
+  <div class="main__right">
+    <div class="buttons">
+      <app-btn-primaru></app-btn-primaru>
+      <app-btn-secondary></app-btn-secondary>
+    </div>
+
+    <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Category</th>
+          <th>Value</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaction of transactionList">
+          <td>{{ transaction.type }}</td>
+          <td>{{ transaction.category }}</td>
+          <td>{{ transaction.value }}</td>
+          <td>
+            <button>Delete</button>
+
+            <button>Update</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
 </div>

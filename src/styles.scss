@@ -3,6 +3,7 @@
 @import "./assets/styles/text";
 @import "./assets/styles/wrapper";
 @import "./assets/styles/form";
+@import "./assets/styles/buttons";
 
 * {
   font-family: "Poppins", sans-serif;
@@ -12,6 +13,48 @@
 
 body {
   background-color: $grey;
+}
+
+a {
+  cursor: pointer;
+}
+
+table {
+  font-size: 20px;
+  background-color: $white;
+  border-radius: 15px;
+
+  th,
+  td {
+    text-align: center;
+    padding: 10px;
+   
+  }
+
+  td{
+     border-top: 1px solid $pink ;
+  }
+
+  th {
+      color: $black;
+      font-weight: 600;
+
+      &:first-child{
+        width: 200px;
+      }
+
+      &:nth-child(2){
+        width: 200px;
+      }
+
+      &:nth-child(3){
+         width: 200px;
+      }
+
+      &:last-child{
+        width: 300px;
+      }
+  }
 }
 
 .purple-icon {
