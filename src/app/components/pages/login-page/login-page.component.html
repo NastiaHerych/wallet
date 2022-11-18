@@ -1,5 +1,5 @@
 <div class="form-container mat-elevation-z5">
-  <h1 class="purple-icon">Login</h1>
+  <h1 class="text text-form__title">Login</h1>
   <form [formGroup]="loginForm" (ngSubmit)="submit()">
     <mat-form-field>
       <input
@@ -26,7 +26,7 @@
         Password is required
       </mat-error>
     </mat-form-field>
-    <div class="center margin-top">
+    <div class="form__button center">
       <button type="submit" mat-raised-button color="primary">Login</button>
     </div>
     <span class="center margin-top"

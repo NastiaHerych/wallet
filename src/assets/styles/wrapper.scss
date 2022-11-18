@@ -16,4 +16,12 @@
     flex-direction: column;
     gap: 10px;
   }
+
+  &-table {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background: $white;
+    border-radius: 15px;
+  }
 }

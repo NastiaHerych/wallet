@@ -25,8 +25,7 @@ import { BtnPrimaruComponent } from './components/buttons/btn-primaru/btn-primar
 import { BtnSecondaryComponent } from './components/buttons/btn-secondary/btn-secondary.component';
 import { AddIncomeDialogComponent } from './components/dialogs/add-income-dialog/add-income-dialog.component';
 import { AddOutcomeDialogComponent } from './components/dialogs/add-outcome-dialog/add-outcome-dialog.component';
-import { TableComponent } from './components/table/table.component';
-
+import { UpdateTransactionDialogComponent } from './components/dialogs/update-transaction-dialog/update-transaction-dialog.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +39,7 @@ import { TableComponent } from './components/table/table.component';
     BtnSecondaryComponent,
     AddIncomeDialogComponent,
     AddOutcomeDialogComponent,
-    TableComponent,
+    UpdateTransactionDialogComponent,
   ],
   imports: [
     BrowserAnimationsModule,

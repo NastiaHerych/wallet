@@ -10,7 +10,7 @@ import { TransactionService } from 'src/app/shared/transaction.service';
   styleUrls: ['./add-outcome-dialog.component.scss'],
 })
 export class AddOutcomeDialogComponent implements OnInit {
-  transactionObj: Transaction = {
+  transactionObj = {
     category: '',
     value: '',
     userId: '',
@@ -31,7 +31,6 @@ export class AddOutcomeDialogComponent implements OnInit {
 
   addTransaction() {
     this.transactionService.add(this.transactionObj);
-    console.log(this.transactionObj);
     this.dialogRef.close();
   }
 

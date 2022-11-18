@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Transaction } from 'src/app/models/Transaction';
 import { AuthService } from 'src/app/shared/auth.service';
 import { TransactionService } from 'src/app/shared/transaction.service';
+import { UpdateTransactionDialogComponent } from '../../dialogs/update-transaction-dialog/update-transaction-dialog.component';
 
 @Component({
   selector: 'app-main-page',
@@ -13,9 +15,11 @@ export class MainPageComponent implements OnInit {
 
   user$ = this.authService.currentUser$;
   userId = '';
+
   constructor(
     public authService: AuthService,
-    private transactionService: TransactionService
+    private transactionService: TransactionService,
+    public dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
@@ -29,11 +33,35 @@ export class MainPageComponent implements OnInit {
     this.transactionService.getByField('userId', this.userId).subscribe(
       (res: any[]) => {
         this.transactionList = res;
-        console.log(res);
       },
       (err: any) => {
         alert('Error while fetching student data');
       }
     );
+  }
+
+  deleteTransaction(transaction: Transaction) {
+    if (window.confirm('Are you sure you want to delete ?')) {
+      if (transaction.id !== undefined) {
+        this.transactionService.delete(transaction.id);
+      }
+    }
+  }
+
+  openDialogToUpdate(transaction: Transaction): void {
+    const dialogRef = this.dialog.open(UpdateTransactionDialogComponent, {
+      width: '260px',
+      data: {
+        category: transaction.category,
+        value: transaction.value,
+        type: transaction.type,
+        userId : transaction.userId,
+        id : transaction.id
+      },
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+    });
   }
 }

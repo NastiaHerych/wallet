@@ -3,9 +3,10 @@ export interface Transaction {
   category: string;
   type: TransactionType;
   value: string;
+  id?: string;
 }
 
 export enum TransactionType {
-  INCOME = "INCOME",
-  OUTCOME = "OUTCOME",
+  INCOME = 'INCOME',
+  OUTCOME = 'OUTCOME',
 }

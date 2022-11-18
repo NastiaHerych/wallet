@@ -1,11 +1,9 @@
-.navigation{
-  
-     margin-top: 20px;
+.navigation {
+  margin-top: 20px;
 
-
-     &__link{
-        display: flex;
-        gap: 10px;
-        align-items: center;
-     }
+  &__link {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
 }

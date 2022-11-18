@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  MatDialog
-} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { AddIncomeDialogComponent } from '../../dialogs/add-income-dialog/add-income-dialog.component';
-
 
 @Component({
   selector: 'app-btn-primaru',

@@ -3,9 +3,9 @@
   max-width: 300px;
   margin: 0 auto;
   margin-top: 60px;
-
-  background: #f7f7f7;
-  padding: 48px;
+  background: $white;
+  box-shadow: none;
+  padding: 40px;
   border-radius: 16px;
 
   mat-form-field {
@@ -16,4 +16,10 @@
 .center {
   display: flex;
   justify-content: center;
+}
+
+.form{
+  &__button{
+    padding: 10px 0 20px 0;
+  }
 }

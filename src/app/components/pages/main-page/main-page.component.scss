@@ -2,11 +2,12 @@
   max-width: 1260px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 15% 85%;
+  grid-template-columns: 24% 76%;
 
   &__left {
     justify-self: start;
   }
+
   &__right {
     display: flex;
     flex-direction: column;
@@ -19,9 +20,4 @@
   margin-top: 20px;
   display: flex;
   gap: 20px;
-}
-
-.table-wrapper {
-  display: flex;
-  justify-content: center;
 }

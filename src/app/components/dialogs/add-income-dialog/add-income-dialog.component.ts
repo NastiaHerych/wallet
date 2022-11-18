@@ -1,8 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import {
-  MatDialogRef,
-  MAT_DIALOG_DATA,
-} from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Transaction, TransactionType } from 'src/app/models/Transaction';
 import { AuthService } from 'src/app/shared/auth.service';
 import { TransactionService } from 'src/app/shared/transaction.service';
@@ -13,7 +10,7 @@ import { TransactionService } from 'src/app/shared/transaction.service';
   styleUrls: ['./add-income-dialog.component.scss'],
 })
 export class AddIncomeDialogComponent implements OnInit {
-  transactionObj: Transaction = {
+  transactionObj = {
     category: '',
     value: '',
     userId: '',
@@ -34,7 +31,6 @@ export class AddIncomeDialogComponent implements OnInit {
 
   addTransaction() {
     this.transactionService.add(this.transactionObj);
-    console.log(this.transactionObj);
     this.dialogRef.close();
   }
 

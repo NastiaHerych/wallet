@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddOutcomeDialogComponent } from '../../dialogs/add-outcome-dialog/add-outcome-dialog.component';
 
-
-
 @Component({
   selector: 'app-btn-secondary',
   templateUrl: './btn-secondary.component.html',

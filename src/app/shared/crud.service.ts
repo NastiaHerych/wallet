@@ -14,6 +14,7 @@ import {
 } from '@angular/fire/firestore';
 import { collectionData } from 'rxfire/firestore';
 import { of } from 'rxjs';
+import { Transaction } from '../models/Transaction';
 
 @Injectable({
   providedIn: 'root',
@@ -48,7 +49,6 @@ export abstract class CrudService<T> {
       collection(this.afs, this.collectionName),
       where(field, '==', value)
     );
- 
     return collectionData(docsRef, { idField: 'id' });
   }
 
