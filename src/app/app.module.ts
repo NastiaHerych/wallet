@@ -26,6 +26,7 @@ import { BtnSecondaryComponent } from './components/buttons/btn-secondary/btn-se
 import { AddIncomeDialogComponent } from './components/dialogs/add-income-dialog/add-income-dialog.component';
 import { AddOutcomeDialogComponent } from './components/dialogs/add-outcome-dialog/add-outcome-dialog.component';
 import { UpdateTransactionDialogComponent } from './components/dialogs/update-transaction-dialog/update-transaction-dialog.component';
+import { DeleteConfirmationComponent } from './components/dialogs/delete-confirmation/delete-confirmation.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { UpdateTransactionDialogComponent } from './components/dialogs/update-tr
     AddIncomeDialogComponent,
     AddOutcomeDialogComponent,
     UpdateTransactionDialogComponent,
+    DeleteConfirmationComponent,
   ],
   imports: [
     BrowserAnimationsModule,

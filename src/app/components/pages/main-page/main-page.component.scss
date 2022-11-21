@@ -13,11 +13,11 @@
     flex-direction: column;
     gap: 20px;
   }
-}
 
-.buttons {
-  justify-content: flex-end;
-  margin-top: 20px;
-  display: flex;
-  gap: 20px;
+  &__buttons {
+    justify-content: flex-end;
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+  }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Transaction, TransactionType } from 'src/app/models/Transaction';
 import { AuthService } from 'src/app/shared/auth.service';
 import { TransactionService } from 'src/app/shared/transaction.service';
@@ -21,6 +22,7 @@ export class AddOutcomeDialogComponent implements OnInit {
   constructor(
     public authService: AuthService,
     private transactionService: TransactionService,
+    public snackBar: MatSnackBar,
     public dialogRef: MatDialogRef<AddOutcomeDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Transaction
   ) {}
@@ -29,8 +31,15 @@ export class AddOutcomeDialogComponent implements OnInit {
     this.dialogRef.close();
   }
 
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, {
+      duration: 5000,
+    });
+  }
+
   addTransaction() {
     this.transactionService.add(this.transactionObj);
+    this.openSnackBar('added successfully', 'ok');
     this.dialogRef.close();
   }
 
